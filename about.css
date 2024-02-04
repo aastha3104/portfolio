@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.portfolio-container2{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.navlist2{
+    display: flex;
+    gap: 3.5em;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.navlist2 li{
+    list-style: none;
+}
+.navlist2 li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #ffff;
+    position: relative;
+}
+.lside,.rside
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.lside{
+    background: #262525;
+    width: 70%;
+    padding-left: 3rcap ;
+}
+.rside{
+    background: linear-gradient(-45deg,#3877ff,#262525 70%);
+    width: 30%;
+}
+
+.decor .shape
+{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+.shape:nth-child(1)
+{
+    background:linear-gradient(90deg,transparent 50%,#262525 50%);
+    width: 38rem;
+}
+.shape:nth-child(2)
+{
+    
+    width: 30rem;
+    background-image: url("./image/img4.jpg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    border: 1rem solid white;
+    box-shadow: 
+    0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem #3877ff,
+    inset 0 0 2rem #3877ff,
+    0 0 4rem #3877ff,
+    inset 0 0 4rem #3877ff;
+}
+.navlist2 li a::after ,.navlist2 .now::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+.navlist2 li a:hover::after,.navlist2 .now::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Add this CSS code for the image animation */
+.decor .shape {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 40%; /* Set initial position below the container */
+    left: 15%;
+    transform: translate(-50%, -50%);
+    animation: slideIn 1.5s ease-out forwards; /* Slide in animation */
+}
+
+@keyframes slideIn {
+    to {
+        top: 50%; /* Set final position at the center */
+    }
+}
+.rside {
+    background: linear-gradient(-45deg, #3877ff, #262525 70%);
+    width: 50%; /* Increase the width */
+    padding: 40px; /* Add more padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me {
+    color: #fff;
+    text-align: center;
+}
+
+.about-me h1, .about-me h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem; /* Increase font size */
+}
+
+.about-me p {
+    margin-bottom: 40px;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.slider-container {
+    width: 80%; /* Adjust the width of the slider container */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1rem; /* Increase font size */
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+output {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem; /* Increase font size */
+    color: #fff;
+}
+/* Add shine effect to all sliders including disabled
+input[type="range"] {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for disabled sliders */
+/* input[type="range"]:disabled {
+    opacity: 0.7;
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0.5), rgba(0, 0, 0, 0.5));
+    border: 1px solid #888;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+output:disabled {
+    color: #777;
+}  */
+/* Additional styling for the disabled sliders */
+/* input[type="range"]:disabled {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+output:disabled {
+    color: #777;
+}
+
+/* Common styling for all sliders */
+/* input[type="range"] {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}  */
+/* Additional styling for the disabled sliders */
+input[type="range"]:disabled {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+output:disabled {
+    color: #777;
+}
+
+/* Common styling for all sliders */
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling on WebKit browsers */
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    cursor: pointer;
+}
+body{
+    user-select: none;
+}
+@media only screen and (max-width: 600px) {
+    /* Styles for screens with a maximum width of 600px */
+    .portfolio-container2 {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    .navlist2 {
+        flex-direction: column;
+    }
+    .rside {
+        width: 100%; /* Occupy full width */
+    }
+}
+
